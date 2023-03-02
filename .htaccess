@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://bestofmine.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://bestofmine.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.bestofmine.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.bestofmine.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://bestofmine.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://bestofmine.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.bestofmine.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.bestofmine.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
